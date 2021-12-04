@@ -1,0 +1,164 @@
+/* set the size of body to fullscreen with no margin and padding
+set background-size to cover, so the background image covers the whole page */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('../images/background1.jpeg') no-repeat center fixed;
+    background-size: cover;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* the main container in the middle of the page, should be aligned in the centre(horizontaly and verticaly) */
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* the container of form
+ set border and border-radius for curved corners, and to distinguish the box from background border shadow is set
+ set the color of background to pale purple(like the one in the background) and reduce opacity so the background is still visible 
+ set display to flex so elements would align next to each other
+ set min-height and min-width so there is enough space in each column
+ */
+
+.center {
+    min-height: 400px;
+    min-width: 500px;
+    padding: 1rem;
+    display: flex;
+    background-color: rgba(231, 231, 231, 0.5);
+    border: 1px;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* this is the class for each column in the form,
+the width is set to 50% so each column gets half of the container
+set flex-direction to column so elements are placed top to bottom
+ */
+
+.col-container {
+    width: 50%;
+    height: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* this is the box containing the radiobuttons and the text input */
+
+.choose-gender-box {
+    height: 50%;
+    padding: 1rem;
+}
+
+
+/* set margin top for all the element in the choose-gender-box so they are spaced apart*/
+
+.choose-gender-box * {
+    margin-top: 5px;
+}
+
+
+/* this is the box containing the text input and lable for getting the name */
+
+.write-name-box {
+    height: 50%;
+    padding: 1rem;
+}
+
+
+/* set margin top for all the element in the choose-gender-box so they are spaced apart*/
+
+.write-name-box * {
+    margin-top: 5px;
+}
+
+
+/* this is the box conataining the result of prediction */
+
+.prediction {
+    height: 100%;
+    padding: 1rem;
+}
+
+
+/* set the height of every element in this box to 30% so when the results are shown, elements don't move
+the height of parent direrctory is set to 100% for the same reason*/
+
+.prediction * {
+    height: 30%;
+}
+
+
+/* this is the box that shows the result that are saved in the local storage */
+
+.storage-results {
+    height: 100%;
+    padding: 0.5rem;
+    border: dashed rgb(98, 91, 168);
+}
+
+
+/* set the height of every element in this box(direct children) to 20% so when the results are shown, elements don't move
+the height of parent direrctory is set to 100% for the same reason*/
+
+.storage-results>* {
+    height: 20%;
+}
+
+
+/* the style of every button with: 
+proper padding(left and right to 10px and top and bottom to 5 px)
+transparent and solid border so it gets a minimal look!
+border-radius set, so the corners are curved */
+
+.button {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: .8rem;
+    background-color: rgb(98, 91, 168);
+    color: rgb(231, 231, 231);
+}
+
+
+/* set border-radius for curved corners and solid and transparent border for the minimal look! */
+
+.input-text {
+    border-radius: 15px;
+    border: solid transparent;
+}
+
+
+/* the style for the notification box 
+opacity is 0 to hide the notification(by default) but the transition is set for all so it appears when needed */
+
+.notifications {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    height: 1rem;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 8px 15px;
+    opacity: 0;
+    transition: all ease .5s;
+}
+
+
+/* set opacity to 1 to show notification box */
+
+.show {
+    opacity: 1;
+}

@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Gender identification</title>
+</head>
+
+<body>
+    <div class="page" style="width: 100%;">
+        <form class="center">
+            <div class="col-container">
+                <h2 style="padding: 5px;">Mr. or Ms.?</h2>
+                <div>
+                    <div class="write-name-box">
+                        <div>
+                            <label>Name:</label>
+                            <input class="input-text" name="firstname" id="firstname" type="text" maxlength="255" required>
+                        </div>
+                        <div><button type="submit" class="button submit-button">Submit</button></div>
+                    </div>
+                    <div class="choose-gender-box">
+                        <div class="radio-buttons">
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">female</label>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">male</label>
+                        </div>
+                        <div> <button type="submit" class="button save-button">Save</button></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-container">
+                <h2>Prediction</h2>
+                <div class="prediction">
+
+                    <div class="gender-predicted"></div>
+                    <div class="accuracy-predicted"></div>
+                </div>
+                <div class="storage-results">
+                    <h2>Saved answer</h2>
+                    <div class="saved-gender"></div>
+                    <div>
+                        <button class="button clear-button">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="notifications"></div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
